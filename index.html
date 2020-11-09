@@ -15,30 +15,49 @@
     <header class="container-fluid text-center text-white bg-dark p-3">
         <h1>Weather Dashboard</h1>
     </header>
-
+    <!--Layout for the page -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 bg-light">
+            <div class="col-lg-3 bg-light mb-0">
                 <h4 class="p-2">Search for a City:</h4>
+                <div class="input-group mb-4">
+                    <input id="city-name" type="text" class="form-control" placeholder="Look for City Name"
+                        aria-label="Look for City Name" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button id="search-button" class="btn btn-primary" type="button">Search
+                        </button>
+                    </div>
+                </div>
+                <button id="clear-history" type="button" class="btn btn-primary btn-lg mb-2">Clear History</button>
             </div>
-            <div class="col-lg-9 bg-white">
+            <div id="display-info" class="col-lg-9 bg-white ">
+                <div class="card mr-0">
+                    <div class="card-body ">
+                        <h2 id="current-city">City Name</h2>
+                        <div id="temperature">Temperature:</div>
+                        <div id="humidity">Humidity:</div>
+                        <div id="wind-speed">Wind Speed:</div>
+                        <div id="UV-Index">UV Index:</div>
+                    </div>
+                </div>
+                <h2 class="col-lg-12 p-3">5-Day Forecast</h2>
+                <div class="row ml-2">
+                    <div class="col-sm-2 text-white ml-3 mr-4 bg-primary">1</div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">2</div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">3</div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">4</div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">5</div>
+                </div>
+
             </div>
         </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-    <!-- Code to the JavaScript File -->
-    <script src="script.js"></script>
+    <!--Jquery Library link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Link to the JavaScript File -->
+    <scrip src="weather-dashboard.js"></scrip>
 </body>
 
 </html>
