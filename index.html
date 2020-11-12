@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS CDN  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,9 +32,9 @@
                 <button id="clear-history" type="button" class="btn btn-primary btn-lg mb-2">Clear History</button>
             </div>
             <div id="display-info" class="col-lg-9 bg-white ">
-                <div class="card mr-0">
-                    <div class="card-body ">
-                        <h2 id="current-city">City Name</h2>
+                <div id=card class="card ">
+                    <div  class="card-body">
+                        <h2 id="current-city ">City Name</h2>
                         <div id="temperature">Temperature:</div>
                         <div id="humidity">Humidity:</div>
                         <div id="wind-speed">Wind Speed:</div>
@@ -53,11 +54,15 @@
         </div>
     </div>
 
-
+<style>
+    #card{
+        margin-top: 20px;
+    }
+</style>
     <!--Jquery Library link-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Link to the JavaScript File -->
-    <scrip src="weather-dashboard.js"></scrip>
+    <scrip src="./assets/weather-dashboard.js"></scrip>
 </body>
 
 </html>

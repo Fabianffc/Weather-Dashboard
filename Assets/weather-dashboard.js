@@ -1,6 +1,21 @@
+const cityName = document.querySelector("#city-name");
+const searchButton = document.querySelector("#searchButon");
+const clearHistory = document.querySelector("#clear-history");
+const currentCity = document.querySelector("#current-city");
+const temp = document.querySelector("#temperature");
+const humidity = document.querySelector("#humidity");
+const windSpeed = document.querySelector("#wind-speed");
+const uvIndex = document.querySelector("#UV-Index");
+
 //This is our APIKey for OpenWeather website
 const myAPIKey="d85ff1873d2dce2e6a1e8ef9f5812e12"
-
+// Here we are building the URL we need to query the database
+queryURL = "https://api.openweathermap.org/data/2.5/forecast?q={imput}&appid={myAPIKey}"  
+// Here we run our AJAX call to the OpenWeatherMap API
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  })
 
 //WHEN I search for a city
 //THEN I am presented with current and future conditions for that city and that city is added to the search history
