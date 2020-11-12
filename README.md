@@ -6,9 +6,11 @@ On this application we will use the the [OpenWeather API](https://openweathermap
 
 ## Built With
 
-*HTML
-*Javascript
-*Bootstrap  https://getbootstrap.com/
+HTML  
+
+Javascript  
+
+Bootstrap  https://getbootstrap.com/
 
 ## MIT License
 
