@@ -1,12 +1,31 @@
 //Pull the selector for the html to JS and assign them into a variable
+// Pull the selectors from fluid-container
 const cityName = document.querySelector("#city-name");
 const searchButton = document.querySelector("#search-button");
 const clearHistory = document.querySelector("#clear-history");
+
+//Card-body selectors assign to a variable
 const currentCity = document.querySelector("#current-city");
 const temp = document.querySelector("#temperature");
 const description = document.querySelector("#description");
 const windSpeed = document.querySelector("#wind-speed");
 const uvIndex = document.querySelector("#UV-Index");
+
+//Forecast Days for days 1-5
+const dayOne = document.querySelector(".date-day-1")
+const dayTwo = document.querySelector(".date-day-2")
+const dayThree = document.querySelector(".date-day-3")
+const dayFour = document.querySelector(".date-day-4")
+const dayFive = document.querySelector(".date-day-5")
+
+//Forecast Temperatures for diferent days
+const tempDayOne = document.querySelector(".temperature1")
+const tempDayTwo = document.querySelector(".temperature2")
+const tempDayThree = document.querySelector(".temperature3")
+const tempDayFour = document.querySelector(".temperature4")
+const tempDayFive = document.querySelector(".temperature5")
+
+
 
 //This is our APIKey for OpenWeather website
 const myAPIKey="d85ff1873d2dce2e6a1e8ef9f5812e12"
@@ -18,7 +37,8 @@ searchButton.addEventListener("click",function(){
     return response.json()
   }).then(function(results){
     console.log(results)
-    //on currentDay variable we switch the parameters from seconds to an actual understandable format
+
+    //0n currentDay variable we switch the parameters from seconds to an actual understandable format
     var currentDay=moment(results.dt,"X").format("LLL")
     var iconcode=results.weather[0].icon
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
