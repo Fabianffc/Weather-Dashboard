@@ -1,5 +1,5 @@
 const cityName = document.querySelector("#city-name");
-const searchButton = document.querySelector("#searchButon");
+const searchButton = document.querySelector("#search-button");
 const clearHistory = document.querySelector("#clear-history");
 const currentCity = document.querySelector("#current-city");
 const temp = document.querySelector("#temperature");
@@ -10,13 +10,42 @@ const uvIndex = document.querySelector("#UV-Index");
 //This is our APIKey for OpenWeather website
 const myAPIKey="d85ff1873d2dce2e6a1e8ef9f5812e12"
 // Here we are building the URL we need to query the database
-queryURL = "https://api.openweathermap.org/data/2.5/forecast?q={imput}&appid={myAPIKey}"  
+
 // Here we run our AJAX call to the OpenWeatherMap API
-$.ajax({
-    url: queryURL,
-    method: "GET"
+// $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   })
+searchButton.addEventListener("click",function(){
+  
+  queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+cityName.value+"&units=imperial&appid=" + myAPIKey 
+  fetch(queryURL).then(function(response){
+    return response.json()
+  }).then(function(results){
+    console.log(results)
+    var currentDay=moment(results.dt,"X").format("LLL")
+    var iconcode=results.weather[0].icon
+    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var img="<img src="+iconurl+"    />"
+    
+    
+    currentCity.innerHTML=results.name +" " + currentDay+img
+    temp.innerHTML= `Temperature: ${results.main.temp}°F`
+  })
+  
+  
+  
+  
+  queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName.value+"&appid=" + myAPIKey 
+  fetch(queryURL).then(function(response){
+    return response.json()
+  }).then(function(results){
+    console.log(results)
   })
 
+
+
+})
 //WHEN I search for a city
 //THEN I am presented with current and future conditions for that city and that city is added to the search history
 //WHEN I view current weather conditions for that city
