@@ -10,7 +10,9 @@ HTML
 
 Javascript  
 
-Bootstrap  https://getbootstrap.com/
+Bootstrap  <https://getbootstrap.com/>  
+
+Openweather API <https://openweathermap.org/>
 
 ## MIT License
 
@@ -37,4 +39,4 @@ SOFTWARE.
 ## Contact 
 
 Fabian Fernandez - fabianffc@gmail.com
-Project Link: https://github.com/Fabianffc/Weather-Dashboard
+Project Link: <https://github.com/Fabianffc/Weather-Dashboard>
