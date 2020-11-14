@@ -17,8 +17,8 @@
         <h1>Weather Dashboard</h1>
     </header>
     <!--Layout for the page -->
-    <div class="container-fluid">
-        <div class="row">
+    <main class="container-fluid">
+        <section class="row">
             <div class="col-lg-3 bg-light mb-0">
                 <h4 class="p-2">Search for a City:</h4>
                 <div class="input-group mb-4">
@@ -32,7 +32,7 @@
                 <button id="clear-history" type="button" class="btn btn-primary btn-lg mb-2">Clear History</button>
             </div>
             <div id="display-info" class="col-lg-9 bg-white ">
-                <div id=card class="card ">
+                <section id=card class="card ">
                     <div  class="card-body">
                         <h2 id="current-city">City Name</h2>
                         <div id="description">description:</div>
@@ -40,19 +40,34 @@
                         <div id="wind-speed">Wind Speed:</div>
                         <div id="UV-Index">UV Index</div>
                     </div>
-                </div>
+                </section>
                 <h2 class="col-lg-12 p-3">5-Day Forecast</h2>
-                <div class="row ml-2">
-                    <div class="col-sm-2 text-white ml-3 mr-4 bg-primary">1</div>
-                    <div class="col-sm-2 text-white mr-4 bg-primary">2</div>
-                    <div class="col-sm-2 text-white mr-4 bg-primary">3</div>
-                    <div class="col-sm-2 text-white mr-4 bg-primary">4</div>
-                    <div class="col-sm-2 text-white mr-4 bg-primary">5</div>
-                </div>
+                <section class="row ml-2">
+                    <div class="col-sm-2 text-white ml-3 mr-4 bg-primary">
+                        <div class="date-day-1">date</div>
+                        <div class="temperature1">temperature</div>
+                    </div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">
+                        <div class="date-day-2">date</div>
+                        <div class="temperature2">temperature</div>
+                    </div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">
+                        <div class="date-day-3">date</div>
+                        <div class="temperature3">temperature</div>
+                    </div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">
+                        <div class="date-day-4">date</div>
+                        <div class="temperature4">temperature</div>
+                    </div>
+                    <div class="col-sm-2 text-white mr-4 bg-primary">
+                        <div class="date-day-5">date</div>
+                        <div class="temperature5">temperature</div>
+                    </div>
+                </section>
 
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
 <style>
     #card{
