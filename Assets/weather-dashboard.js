@@ -58,6 +58,13 @@ searchButton.addEventListener("click",function(){
     return response.json()
   }).then(function(results){
     console.log(results)
+
+    var dayOne = moment(results.dt,"X").format("L")
+    dayOne.innerHTML = results.list[9].dt_text
+    var dayTwo = moment(results.dt,"X").format("L")
+    var dayThree = moment(results.dt,"X").format("L")
+    var dayFour = moment(results.dt,"X").format("L")
+    var dayFive = moment(results.dt,"X").format("L")
   })
 
 
