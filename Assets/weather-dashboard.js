@@ -41,7 +41,7 @@ searchButton.addEventListener("click",function(){
     //0n currentDay variable we switch the parameters from seconds to an actual understandable format
     var currentDay=moment(results.dt,"X").format("LLL")
     var iconcode=results.weather[0].icon
-    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     var img="<img src="+iconurl+"    />"
     
     windSpeed.innerHTML= `Wind Speed: ${results.wind.speed} mph`
